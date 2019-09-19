@@ -1,0 +1,10 @@
+<form [formGroup]="form">
+  <div> <input formControlName="name" required></div>
+  <div *ngIf="name.invalid && (name.dirty || name.touched)"
+    class="alert alert-danger"> <div *ngIf="!!name?.errors.required" style="color:red">
+        Введите Имя
+      </div></div>
+  <div> <input formControlName="surname"></div>
+  <div> min length 2</div>
+  <button (click)="udpatePerson()"> Save </button>
+</form>

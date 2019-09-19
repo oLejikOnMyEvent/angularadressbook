@@ -1,0 +1,9 @@
+<ul>
+    <li *ngFor="let group of groups">{{group.name}}
+        <ul>
+            <li *ngFor="let person of group.people" (click)="itemClicked(person)">{{person.name}} {{person.surname}}</li>
+        </ul>
+    </li>
+</ul>
+
+<button (click)="addNewPerson()">new Person</button>
